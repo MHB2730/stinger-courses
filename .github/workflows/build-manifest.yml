@@ -1,0 +1,51 @@
+name: build-manifest
+
+# Regenerate manifest.json whenever a course file is pushed (e.g. by Course Studio's
+# Publish), then purge the jsDelivr cache so the app sees the update within seconds.
+# The desktop app only PUTs the course file; this job owns the manifest + purge.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'courses/**'          # NOT manifest.json — so the manifest commit below can't re-trigger this
+      - 'scripts/build-manifest.mjs'
+  workflow_dispatch: {}        # allow a manual run for testing
+
+permissions:
+  contents: write              # to commit the regenerated manifest
+
+concurrency:
+  group: build-manifest
+  cancel-in-progress: false    # serialize overlapping publishes rather than dropping one
+
+jobs:
+  manifest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Regenerate manifest.json
+        run: node scripts/build-manifest.mjs
+
+      - name: Commit manifest if it changed
+        run: |
+          if [ -n "$(git status --porcelain manifest.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add manifest.json
+            git commit -m "chore: regenerate manifest.json [skip ci]"
+            git push
+            echo "committed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "manifest.json unchanged"
+          fi
+        id: commit
+
+      - name: Purge jsDelivr cache
+        run: |
+          purge() { echo "purging $1"; curl -sfS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$1" -o /dev/null || echo "  (purge failed, non-fatal)"; }
+          purge "manifest.json"
+          for f in courses/*.geojson; do purge "$f"; done

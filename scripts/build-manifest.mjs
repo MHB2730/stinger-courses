@@ -34,9 +34,11 @@ const courses = files.map((fname) => {
   };
 });
 
+// Deterministic on purpose: no build timestamp, so the CI job only commits a new
+// manifest when a course's content (sha256/bytes) actually changed — not on every run.
+// The app detects changes from each course's sha256, not from the manifest itself.
 const manifest = {
   schema: 1,
-  generated: new Date().toISOString(),
   cdnBase: CDN_BASE,
   courses,
 };
