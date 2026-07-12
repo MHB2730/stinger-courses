@@ -3,6 +3,16 @@
   "cdnBase": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main",
   "courses": [
     {
+      "id": "august-golf-course-mria18n5",
+      "name": "August Golf Course",
+      "region": "Gillits",
+      "par": null,
+      "holeCount": 9,
+      "file": "courses/august-golf-course-mria18n5.geojson",
+      "bytes": 60544,
+      "sha256": "03a8da2ac97182a7afb32d587d5ff9f5a6182690e3f6a156c8718fa5c543b082"
+    },
+    {
       "id": "cotswold-downs",
       "name": "Cotswold Downs",
       "region": "Hillcrest, KwaZulu-Natal",
