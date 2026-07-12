@@ -1,0 +1,27 @@
+{
+  "schema": 1,
+  "generated": "2026-07-12T19:22:13.351Z",
+  "cdnBase": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main",
+  "courses": [
+    {
+      "id": "cotswold-downs",
+      "name": "Cotswold Downs",
+      "region": "Hillcrest, KwaZulu-Natal",
+      "par": 72,
+      "holeCount": 18,
+      "file": "courses/cotswold-downs.geojson",
+      "bytes": 512414,
+      "sha256": "a2777de1ffda4c26402e3b86268d7d69658c6615c7edc144a4e6147edac798c0"
+    },
+    {
+      "id": "kloof-country-club",
+      "name": "Kloof Country Club",
+      "region": "Kloof, South Africa",
+      "par": 70,
+      "holeCount": 18,
+      "file": "courses/kloof-country-club.geojson",
+      "bytes": 229852,
+      "sha256": "efbde97e5ad6bed5519003e3065fcc42ec9bb56cca1be309bf21da40a6ede34d"
+    }
+  ]
+}
