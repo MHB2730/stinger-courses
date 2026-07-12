@@ -15,12 +15,12 @@
     {
       "id": "kloof-country-club",
       "name": "Kloof Country Club",
-      "region": "Kloof, South Africa",
+      "region": "Kloof, KwaZulu-Natal",
       "par": 70,
       "holeCount": 18,
       "file": "courses/kloof-country-club.geojson",
-      "bytes": 229852,
-      "sha256": "efbde97e5ad6bed5519003e3065fcc42ec9bb56cca1be309bf21da40a6ede34d"
+      "bytes": 229853,
+      "sha256": "e8a2e75552fc29da76137a284c181b8c26902d627d7ed1c098364a8605a5586e"
     }
   ]
 }
