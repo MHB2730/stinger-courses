@@ -16,6 +16,19 @@
       "modelBytes": 55972
     },
     {
+      "id": "camelot-country-estate-mrjj5cin",
+      "name": "Camelot Country Estate",
+      "region": "Hillcrest",
+      "holeCount": 9,
+      "file": "courses/camelot-country-estate-mrjj5cin.geojson",
+      "bytes": 127922,
+      "sha256": "720cd7e2e64ed09de14da6dfc485d452cfefcb2f0053fc432a5885b684dc72bd",
+      "location": "Hillcrest",
+      "model": "models/camelot-country-estate-mrjj5cin.json",
+      "modelSha256": "4efbfee8367b2f06252f406df829d994262a5ff438ba79580f0477ee7612e336",
+      "modelBytes": 116528
+    },
+    {
       "id": "cotswold-downs",
       "name": "Cotswold Downs",
       "region": "Hillcrest, KwaZulu-Natal",
