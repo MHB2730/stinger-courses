@@ -4,12 +4,16 @@
   "courses": [
     {
       "id": "august-golf-course-mria18n5",
-      "name": "August Golf Course",
+      "name": "Augusta Golf Course",
       "region": "Gillits",
       "holeCount": 9,
       "file": "courses/august-golf-course-mria18n5.geojson",
-      "bytes": 60544,
-      "sha256": "03a8da2ac97182a7afb32d587d5ff9f5a6182690e3f6a156c8718fa5c543b082"
+      "bytes": 60798,
+      "sha256": "b132b37d0b29a1ee69f4ea7286278b8075c551c8daa8e27aa51f37b1c5835b9e",
+      "location": "Gillits",
+      "model": "models/august-golf-course-mria18n5.json",
+      "modelSha256": "2bcdfcccfd279b567094ca091f4054ea769759b8438647fb242651df2f9928d9",
+      "modelBytes": 55972
     },
     {
       "id": "cotswold-downs",
