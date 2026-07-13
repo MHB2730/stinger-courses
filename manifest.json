@@ -21,12 +21,12 @@
       "region": "Hillcrest",
       "holeCount": 9,
       "file": "courses/camelot-country-estate-mrjj5cin.geojson",
-      "bytes": 127922,
-      "sha256": "720cd7e2e64ed09de14da6dfc485d452cfefcb2f0053fc432a5885b684dc72bd",
+      "bytes": 128175,
+      "sha256": "878c8952c4ce59b3f890ec1bf4c15491f7f5c3e0fa8b31cd398c25eed418faba",
       "location": "Hillcrest",
       "model": "models/camelot-country-estate-mrjj5cin.json",
-      "modelSha256": "4efbfee8367b2f06252f406df829d994262a5ff438ba79580f0477ee7612e336",
-      "modelBytes": 116528
+      "modelSha256": "04170a41d0fc3d9f3bd1305fe61aa25715255cc1ebae57c0f4a20e18619e3797",
+      "modelBytes": 135419
     },
     {
       "id": "cotswold-downs",
