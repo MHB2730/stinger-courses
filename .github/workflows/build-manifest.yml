@@ -8,6 +8,7 @@ on:
     branches: [main]
     paths:
       - 'courses/**'          # NOT manifest.json — so the manifest commit below can't re-trigger this
+      - 'models/**'
       - 'scripts/build-manifest.mjs'
   workflow_dispatch: {}        # allow a manual run for testing
 
@@ -49,3 +50,4 @@ jobs:
           purge() { echo "purging $1"; curl -sfS "https://purge.jsdelivr.net/gh/${GITHUB_REPOSITORY}@main/$1" -o /dev/null || echo "  (purge failed, non-fatal)"; }
           purge "manifest.json"
           for f in courses/*.geojson; do purge "$f"; done
+          for f in models/*.json; do [ -e "$f" ] && purge "$f"; done
