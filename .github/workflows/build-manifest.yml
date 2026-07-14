@@ -9,6 +9,7 @@ on:
     paths:
       - 'courses/**'          # NOT manifest.json — so the manifest commit below can't re-trigger this
       - 'models/**'
+      - 'logos/**'            # a new/changed club logo → regenerate + purge so clients see it
       - 'scripts/build-manifest.mjs'
   workflow_dispatch: {}        # allow a manual run for testing
 
@@ -51,3 +52,4 @@ jobs:
           purge "manifest.json"
           for f in courses/*.geojson; do purge "$f"; done
           for f in models/*.json; do [ -e "$f" ] && purge "$f"; done
+          for f in logos/*; do [ -e "$f" ] && purge "$f"; done

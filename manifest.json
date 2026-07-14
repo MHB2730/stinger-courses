@@ -13,7 +13,8 @@
       "location": "Gillits",
       "model": "models/august-golf-course-mria18n5.json",
       "modelSha256": "3fd106a5570ace27e0c8220ec76031bea229342cf0509ebc810f69611272328f",
-      "modelBytes": 66577
+      "modelBytes": 66577,
+      "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/august-golf-course-mria18n5.png"
     },
     {
       "id": "camelot-country-estate-mrjj5cin",
@@ -26,7 +27,8 @@
       "location": "Hillcrest",
       "model": "models/camelot-country-estate-mrjj5cin.json",
       "modelSha256": "04170a41d0fc3d9f3bd1305fe61aa25715255cc1ebae57c0f4a20e18619e3797",
-      "modelBytes": 135419
+      "modelBytes": 135419,
+      "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/camelot-country-estate-mrjj5cin.png"
     },
     {
       "id": "cotswold-downs",
@@ -40,8 +42,9 @@
       "location": "Hillcrest, KwaZulu-Natal",
       "intendedPar": 72,
       "model": "models/cotswold-downs.json",
-      "modelSha256": "425e25c37f355803dd36048d0defa4af09897f1c870803346a84093e199e6a1c",
-      "modelBytes": 1098635
+      "modelSha256": "8e43a95cd56949c5b6ab8474743c94bf658f2679c42c2e8ba0fc75241ebd4711",
+      "modelBytes": 1145364,
+      "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/cotswold-downs.png"
     },
     {
       "id": "kloof-country-club",
@@ -54,8 +57,9 @@
       "sha256": "e8a2e75552fc29da76137a284c181b8c26902d627d7ed1c098364a8605a5586e",
       "location": "Kloof, South Africa",
       "model": "models/kloof-country-club.json",
-      "modelSha256": "e5e32461e7a990269edbf8dd333f36a7f5075c8f799654f3d9a2983a1040caf7",
-      "modelBytes": 486318
+      "modelSha256": "ad057f6dd72bb132a6687a86109e48ec984a0f3ba4bdd3fd3b78fd101129b176",
+      "modelBytes": 506936,
+      "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/kloof-country-club.png"
     },
     {
       "id": "nu-driving-range-mrk78osb",

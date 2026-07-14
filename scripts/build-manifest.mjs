@@ -57,6 +57,13 @@ for (const fname of readDir('models').filter((f) => f.endsWith('.json')).sort())
   });
 }
 
+// logos/<id>.<ext> — the club's brand logo, CDN-served so it travels to every client (fresh
+// installs and the phone app), not just the machine that set it. Only attached to known courses.
+for (const fname of readDir('logos').filter((f) => /\.(png|svg|jpe?g|webp)$/i.test(f)).sort()) {
+  const id = fname.replace(/\.[^.]+$/, '');
+  if (byId.has(id)) entry(id).logo = `${CDN_BASE}/logos/${fname}`;
+}
+
 // Drop undefined fields, stable id order.
 const courses = [...byId.values()]
   .map((e) => Object.fromEntries(Object.entries(e).filter(([, v]) => v !== undefined)))
