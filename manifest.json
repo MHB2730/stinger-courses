@@ -59,14 +59,14 @@
     },
     {
       "id": "nu-driving-range-mrk78osb",
-      "name": "NU Driving Range",
+      "name": "The Mashters - NU Driving Range",
       "holeCount": 9,
       "file": "courses/nu-driving-range-mrk78osb.geojson",
-      "bytes": 66109,
-      "sha256": "7d67ebdc079c304d1ad97bbd92b6e157c69d943ba1989603adc45708918455d2",
+      "bytes": 66124,
+      "sha256": "2170d1560f9e390604445ccde868cd6b20c65556aad0e343bc536251c96e91f9",
       "model": "models/nu-driving-range-mrk78osb.json",
-      "modelSha256": "e3ce82aed4a7d591445d64680305c92d085b893a78b83baa044ce2ea3cc09602",
-      "modelBytes": 58618
+      "modelSha256": "7711ae992259a0e6b12ab42f117036a38437684bf5fb291d9c68c2cb947b7493",
+      "modelBytes": 58633
     }
   ]
 }
