@@ -22,12 +22,12 @@
       "region": "Hillcrest",
       "holeCount": 9,
       "file": "courses/camelot-country-estate-mrjj5cin.geojson",
-      "bytes": 128175,
-      "sha256": "878c8952c4ce59b3f890ec1bf4c15491f7f5c3e0fa8b31cd398c25eed418faba",
+      "bytes": 154155,
+      "sha256": "205e7d8669bcddab11be26c723faf9c30f0dcb51353ca3a987df0317b3b2a8f4",
       "location": "Hillcrest",
       "model": "models/camelot-country-estate-mrjj5cin.json",
-      "modelSha256": "04170a41d0fc3d9f3bd1305fe61aa25715255cc1ebae57c0f4a20e18619e3797",
-      "modelBytes": 135419,
+      "modelSha256": "c1c990c5392bd150b315ac96d38fbc4796b6f7e648308de1a329e87bce57f03d",
+      "modelBytes": 157027,
       "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/camelot-country-estate-mrjj5cin.png"
     },
     {
