@@ -56,6 +56,17 @@
       "model": "models/kloof-country-club.json",
       "modelSha256": "e5e32461e7a990269edbf8dd333f36a7f5075c8f799654f3d9a2983a1040caf7",
       "modelBytes": 486318
+    },
+    {
+      "id": "nu-driving-range-mrk78osb",
+      "name": "NU Driving Range",
+      "holeCount": 9,
+      "file": "courses/nu-driving-range-mrk78osb.geojson",
+      "bytes": 66109,
+      "sha256": "7d67ebdc079c304d1ad97bbd92b6e157c69d943ba1989603adc45708918455d2",
+      "model": "models/nu-driving-range-mrk78osb.json",
+      "modelSha256": "e3ce82aed4a7d591445d64680305c92d085b893a78b83baa044ce2ea3cc09602",
+      "modelBytes": 58618
     }
   ]
 }
