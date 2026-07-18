@@ -36,6 +36,25 @@ always go through jsDelivr (or GitHub Pages).
    - `https://purge.jsdelivr.net/gh/MHB2730/stinger-courses@main/manifest.json`
    - `https://purge.jsdelivr.net/gh/MHB2730/stinger-courses@main/courses/<id>.geojson`
 
+## Placed-asset schema (`kind:"asset"` features)
+
+Decorative props are `Point` features with `properties: { hole, kind: "asset", sub, … }`.
+The Stinger app's **stinger3d** engine renders the modelled subs as real 3D props draped
+on the terrain; Course Studio authors them and previews with the same engine.
+
+| `sub` | rendered as | extra properties |
+|---|---|---|
+| `tree`, `pine` | 3D broadleaf oak (seeded variants, instanced) | `scale`, `rot` |
+| `bush` | 3D spreading shrub | `scale`, `rot` |
+| `grass` | 3D long-grass tuft | `scale`, `rot` |
+| `tee-marker` | 3D dome tee marker | `color`: black\|yellow\|white\|red\|blue |
+| `yardage-post` | 3D distance post (cap colour by distance) | `num`: 100\|150\|200 (metres) |
+| `bunker-rake` | 3D rake in resting pose | `scale`, `rot` |
+| `rock`, `toilet` | 2D billboard fallback (no 3D model yet) | `scale` |
+
+Pins are separate: `kind:"pin"` (+ optional `color`, `scale`) — the engine renders the
+Stinger 3D pin flag; sizes are world-space so props stay proportionate at every zoom.
+
 ## manifest.json schema
 
 ```jsonc
