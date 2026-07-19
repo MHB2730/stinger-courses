@@ -3,18 +3,18 @@
   "cdnBase": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main",
   "courses": [
     {
-      "id": "august-golf-course-mria18n5",
+      "id": "augusta-golf-course-mria18n5",
       "name": "Augusta Golf Course",
       "region": "Gillits",
       "holeCount": 9,
-      "file": "courses/august-golf-course-mria18n5.geojson",
-      "bytes": 93614,
-      "sha256": "f42b9d5b362ebc88742cc440aef1e3dbef7056ce3799f4192ea9087b3d6d7966",
+      "file": "courses/augusta-golf-course-mria18n5.geojson",
+      "bytes": 93615,
+      "sha256": "2d8f9d84315bf7f99a45c85f346fb599b523c0248e666010a8acb42e3da64c26",
       "location": "Gillits",
-      "model": "models/august-golf-course-mria18n5.json",
-      "modelSha256": "3fd106a5570ace27e0c8220ec76031bea229342cf0509ebc810f69611272328f",
-      "modelBytes": 66577,
-      "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/august-golf-course-mria18n5.png"
+      "model": "models/augusta-golf-course-mria18n5.json",
+      "modelSha256": "b551c55bbf8d5db2236201327a12bffc6b582f090a4f90f76aa4bbc64db7f54c",
+      "modelBytes": 66578,
+      "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/augusta-golf-course-mria18n5.png"
     },
     {
       "id": "camelot-country-estate-mrjj5cin",
