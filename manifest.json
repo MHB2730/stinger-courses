@@ -42,8 +42,8 @@
       "location": "Hillcrest, KwaZulu-Natal",
       "intendedPar": 72,
       "model": "models/cotswold-downs.json",
-      "modelSha256": "8e43a95cd56949c5b6ab8474743c94bf658f2679c42c2e8ba0fc75241ebd4711",
-      "modelBytes": 1145364,
+      "modelSha256": "425e25c37f355803dd36048d0defa4af09897f1c870803346a84093e199e6a1c",
+      "modelBytes": 1098635,
       "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/cotswold-downs.png"
     },
     {
@@ -57,8 +57,8 @@
       "sha256": "6911046c9463278071d2cf3a8bf31e564e79c31c8a7cac9797a9ca435ad5f258",
       "location": "Kloof, South Africa",
       "model": "models/kloof-country-club.json",
-      "modelSha256": "ad057f6dd72bb132a6687a86109e48ec984a0f3ba4bdd3fd3b78fd101129b176",
-      "modelBytes": 506936,
+      "modelSha256": "e5e32461e7a990269edbf8dd333f36a7f5075c8f799654f3d9a2983a1040caf7",
+      "modelBytes": 486318,
       "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/kloof-country-club.png"
     },
     {
