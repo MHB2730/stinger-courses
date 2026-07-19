@@ -15,7 +15,20 @@ const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OWNER_REPO = 'MHB2730/stinger-courses';
 const CDN_BASE = `https://cdn.jsdelivr.net/gh/${OWNER_REPO}@main`;
 
-const sha256 = (buf) => createHash('sha256').update(buf).digest('hex');
+// Hash the file as GIT stores it, not as the working tree happens to hold it.
+//
+// core.autocrlf is on for this repo, so on Windows a checked-out multi-line file carries CRLF
+// while the committed blob is LF. Hashing the raw bytes therefore produced a DIFFERENT sha and
+// byte count on a Windows machine than in CI — the two would overwrite each other's manifest
+// entries forever, each "correcting" the other. Normalising CRLF back to LF before hashing makes
+// the manifest reproducible on any platform.
+//
+// The app-facing `sha256` over courses/*.geojson was never affected: the exporter writes those as
+// a single line, so they contain no newlines to translate. This mattered only for the model
+// entries, but it mattered every single time.
+const normalise = (buf) => Buffer.from(buf.toString('binary').replace(/\r\n/g, '\n'), 'binary');
+const sha256 = (buf) => createHash('sha256').update(normalise(buf)).digest('hex');
+const byteLen = (buf) => normalise(buf).length;
 const readDir = (d) => { try { return fs.readdirSync(path.join(ROOT, d)); } catch { return []; } };
 
 // One entry per course id, merged from both formats.
@@ -34,7 +47,7 @@ for (const fname of readDir('courses').filter((f) => f.endsWith('.geojson')).sor
     par: c.par ?? undefined,
     holeCount: c.holeCount ?? undefined,
     file: `courses/${fname}`,
-    bytes: buf.length,
+    bytes: byteLen(buf),
     sha256: sha256(buf),
   });
 }
@@ -53,7 +66,7 @@ for (const fname of readDir('models').filter((f) => f.endsWith('.json')).sort())
     intendedPar: md.intendedPar ?? undefined,
     model: `models/${fname}`,
     modelSha256: sha256(buf),
-    modelBytes: buf.length,
+    modelBytes: byteLen(buf),
   });
 }
 
