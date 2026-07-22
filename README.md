@@ -28,13 +28,25 @@ always go through jsDelivr (or GitHub Pages).
 
 ## How a course gets updated (publish)
 
-1. Edit the course in Course Studio → **Export for Stinger (GeoJSON)**.
-2. The file is written to `courses/<id>.geojson` and committed here (Course Studio's
-   Publish does this via the GitHub Contents API with a fine-grained token).
+> **This repo is NOT updated automatically.** Course Studio's **Publish** writes to
+> Supabase only — the GitHub push it was designed for was never wired up
+> (`getPublishToken()` in `electron/main.cjs` has no caller). Supabase and this repo
+> are therefore two independent stores that drift apart unless step 2 below is done
+> by hand. They HAVE drifted before: on 2026-07-22 the four courses published on
+> 2026-07-19 were stale on Supabase, while Cotswold's green-slope export was stale
+> here. Whenever you publish, do both.
+
+1. Edit the course in Course Studio → **Export for Stinger (GeoJSON)**, and
+   **Publish** (writes the geojson + model to Supabase, and the row in `courses`).
+2. **By hand:** copy the exported file to `courses/<id>.geojson` and the model to
+   `models/<id>.json`, then commit here.
 3. `node scripts/build-manifest.mjs` refreshes `manifest.json`.
 4. jsDelivr's cache is purged for the changed paths so the update is live in seconds:
    - `https://purge.jsdelivr.net/gh/MHB2730/stinger-courses@main/manifest.json`
    - `https://purge.jsdelivr.net/gh/MHB2730/stinger-courses@main/courses/<id>.geojson`
+
+To confirm the two stores agree, compare the manifest's `sha256` for a course with
+`geojson_sha256` in Supabase's `courses` row — they must match.
 
 ## Placed-asset schema (`kind:"asset"` features)
 
