@@ -61,17 +61,6 @@
       "modelSha256": "e5e32461e7a990269edbf8dd333f36a7f5075c8f799654f3d9a2983a1040caf7",
       "modelBytes": 486318,
       "logo": "https://cdn.jsdelivr.net/gh/MHB2730/stinger-courses@main/logos/kloof-country-club.png"
-    },
-    {
-      "id": "nu-driving-range-mrk78osb",
-      "name": "The Mashters - NU Driving Range",
-      "holeCount": 9,
-      "file": "courses/nu-driving-range-mrk78osb.geojson",
-      "bytes": 77660,
-      "sha256": "6742506d55f7d51652d97a6cc2aa41298f30329de368870e5be9a68dd45a2682",
-      "model": "models/nu-driving-range-mrk78osb.json",
-      "modelSha256": "7711ae992259a0e6b12ab42f117036a38437684bf5fb291d9c68c2cb947b7493",
-      "modelBytes": 58633
     }
   ]
 }
